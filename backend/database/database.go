@@ -16,7 +16,7 @@ type MongoInstance struct {
 	DB     *mongo.Database
 }
 
-func ConnectDB() *mongo.client {
+func ConnectDB() *mongo.Client {
 	database := os.Getenv("DB_URL")
 
 	client, err := mongo.NewClient(options.Client().ApplyURI(database))
